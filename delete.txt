@@ -1,0 +1,8 @@
+BR_df = pd.read_csv("../Trails For Project/ProjDataset/archive/BR_youtube_trending_data.csv")
+BR_df.head(2)
+BR_df["year_month"] = [i[0:7] for i in BR_df["trending_date"]]
+for key,df in BR_df.groupby(['year_month']):
+    filename = "./Data/BR/IN_"+key+".csv"
+    df_new = df.iloc[:,:-2].reset_index(drop=True)
+    df_new.to_csv(filename)
+
