@@ -1,3 +1,12 @@
+CA_df = pd.read_csv("../Trails For Project/ProjDataset/archive/CA_youtube_trending_data.csv")
+CA_df.head(2)
+CA_df["year_month"] = [i[0:7] for i in CA_df["trending_date"]]
+for key,df in CA_df.groupby(['year_month']):
+    filename = "./Data/CA/IN_"+key+".csv"
+    df_new = df.iloc[:,:-2].reset_index(drop=True)
+    df_new.to_csv(filename)
+
+
 BR_df = pd.read_csv("../Trails For Project/ProjDataset/archive/BR_youtube_trending_data.csv")
 BR_df.head(2)
 BR_df["year_month"] = [i[0:7] for i in BR_df["trending_date"]]
@@ -6,3 +15,41 @@ for key,df in BR_df.groupby(['year_month']):
     df_new = df.iloc[:,:-2].reset_index(drop=True)
     df_new.to_csv(filename)
 
+
+
+BR_df = pd.read_csv("../Trails For Project/ProjDataset/archive/BR_youtube_trending_data.csv")
+BR_df.head(2)
+BR_df["year_month"] = [i[0:7] for i in BR_df["trending_date"]]
+for key,df in BR_df.groupby(['year_month']):
+    filename = "./Data/BR/IN_"+key+".csv"
+    df_new = df.iloc[:,:-2].reset_index(drop=True)
+    df_new.to_csv(filename)
+
+
+BR_df = pd.read_csv("../Trails For Project/ProjDataset/archive/BR_youtube_trending_data.csv")
+BR_df.head(2)
+BR_df["year_month"] = [i[0:7] for i in BR_df["trending_date"]]
+for key,df in BR_df.groupby(['year_month']):
+    filename = "./Data/BR/IN_"+key+".csv"
+    df_new = df.iloc[:,:-2].reset_index(drop=True)
+    df_new.to_csv(filename)
+
+
+
+BR_df = pd.read_csv("../Trails For Project/ProjDataset/archive/BR_youtube_trending_data.csv")
+BR_df.head(2)
+BR_df["year_month"] = [i[0:7] for i in BR_df["trending_date"]]
+for key,df in BR_df.groupby(['year_month']):
+    filename = "./Data/BR/IN_"+key+".csv"
+    df_new = df.iloc[:,:-2].reset_index(drop=True)
+    df_new.to_csv(filename)
+
+
+
+BR_df = pd.read_csv("../Trails For Project/ProjDataset/archive/BR_youtube_trending_data.csv")
+BR_df.head(2)
+BR_df["year_month"] = [i[0:7] for i in BR_df["trending_date"]]
+for key,df in BR_df.groupby(['year_month']):
+    filename = "./Data/BR/IN_"+key+".csv"
+    df_new = df.iloc[:,:-2].reset_index(drop=True)
+    df_new.to_csv(filename)
