@@ -1,8 +1,8 @@
-FR_df = pd.read_csv("../Trails For Project/ProjDataset/archive/FR_youtube_trending_data.csv")
-FR_df.head(2)
-FR_df["year_month"] = [i[0:7] for i in FR_df["trending_date"]]
-for key,df in FR_df.groupby(['year_month']):
-    filename = "./Data/FR/IN_"+key+".csv"
-    df_new = df.iloc[:,:-2].reset_infrx(drop=True)
+GB_df = pd.read_csv("../Trails For Project/ProjDataset/archive/GB_youtube_trending_data.csv")
+GB_df.head(2)
+GB_df["year_month"] = [i[0:7] for i in GB_df["trending_date"]]
+for key,df in GB_df.groupby(['year_month']):
+    filename = "./Data/GB/IN_"+key+".csv"
+    df_new = df.iloc[:,:-2].reset_index(drop=True)
     df_new.to_csv(filename)
 
